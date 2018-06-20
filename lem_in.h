@@ -36,6 +36,13 @@ typedef struct				s_links
 	struct s_links			*next;
 }							t_links;
 
+typedef struct				s_path
+{
+	int						room_num;
+	struct s_path			*parent;
+	struct s_path			*next;
+}							t_path;	
+
 int							throw_error(void);
 int							li_free_error1(char **line, t_rooms **room);
 int							li_free_error2(char **line, t_rooms **room, t_links **link);
@@ -64,4 +71,9 @@ int							li_check_spaces(char **line, char ***room_data);
 int							li_link_invalid(char ***links_data, t_links **new);
 int							li_get_links(t_links **link, t_rooms **room, char ***links_data);
 int							li_link_com(char **line);
+int							li_solve(long long ants, t_rooms **room, t_links **link);
+int							li_create_list(t_rooms *room, t_links *link, t_path *room_path, t_path *child_path);
+int							li_make_child(t_links *link, t_path *room_path, t_path **child_path);
+int							li_repeat(int num, t_path *room_path);
+
 #endif

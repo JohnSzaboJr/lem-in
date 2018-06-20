@@ -26,9 +26,11 @@ int main(void)
     link = NULL;
     if (!(li_parse(&line, &ants, &room, &link)))
         return (-1);
-    // if (!li_solve(ants, &room, &link))
-    //     return (-1);
+    if (!li_solve(ants, &room, &link))
+        return (-1);
     li_room_free(&room);
     li_link_free(&link);
 	return (0);
+    // to and from can't be the same? do I avoid it?
+    // recognize invalid maps?
 }

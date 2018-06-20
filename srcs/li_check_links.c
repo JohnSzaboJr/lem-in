@@ -32,7 +32,7 @@ int li_check_links(char **line, t_rooms **room, t_links **link)
         ft_freestrtab(&links_data);
         return (1);
     }
-    if (!li_link_com(line))
+    if (!li_link_com(line) || !(*link))
         return (li_free_error2(line, room, link));
     return (1);
 }
