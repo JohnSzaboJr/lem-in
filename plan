@@ -1,0 +1,109 @@
+
+Data structure to record paths
+
+//
+[0] - [1] - [3]
+    - [2] - [4]
+          - [5]
+
+*prev
+*next -> a list of doors...
+
+struct {
+    next **list;
+    prev *list;
+}
+
+
+name = [0]
+prev = NULL
+next = NULL
+doors = [1 (prev: 0)] -> [2 (prev: 0)] -> NULL
+
+- assign a number for each room so that it is more easily handled
+
+- through prev, visszakovetheto az utvonal.
+- through doors other possibilities are explored.
+
+but is it workable for many many ants?
+
+first find the path of the first ant.
+free up the list, and record the final path (t_list_num)
+find the path of the second ant, and attach it to the side
+then print each level 
+
+
+L1  - L2  - L3  - L4
+[0] - [0] - [0] - [0]
+[1] - [0] - [5]
+
+if (room is end)
+record_path(next_available_room, room_list);
+
+struct {
+    left:
+    right: 
+    up: 
+    down: 
+}
+
+node is upper left
+
+list of available rooms 
+
+[0] [1] [2] [3] [4] [5] [6]
+ 1       3
+
+
+ add room 0
+
+ 0
+
+ 0 opens to 1 and 2.
+
+ 0 1 3  
+ 0 2 
+ 0 1 4 
+
+ // Pseudocode for algorithm:
+
+ 1, it starts with an t_list_num **tab array of lists.
+ 2, array: [ list( num = 0, next = NULL)]
+ 3, function: 
+ 4, look at all items in the array. find out how many rooms are
+ connected to the room specified in list->num. add them together, 
+ and malloc an array for that many number of lists.
+ 5, again, look at all items in the array.
+ 6. for each item: find the available connecting rooms,
+
+
+
+
+
+
+
+
+ //
+
+ struct {
+     room: 
+     parent:
+     next:  
+ }
+
+ 1. function:
+ 2. looks at all rooms in the list
+ 3. it creates a list of all connecting rooms, each time recording 
+ the parent
+ 4. call the function again with the list 
+ (then free, so it frees as returns)
+ 5. exit condition: room has no connections
+ 6. or: found the end -> retrace the path.
+
+how to free?
+ (record the rooms we've already been to - 
+ exclude from the possibilities others from the path?)
+
+ // parse and record Data
+ // find optimal path
+ // send the ants through and print.
