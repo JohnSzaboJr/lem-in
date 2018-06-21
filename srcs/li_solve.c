@@ -16,21 +16,17 @@
 
 int li_solve(long long ants, t_rooms **room, t_links **link)
 {
-    t_path      *room_path;
-    t_path      *child_path;
-    t_list_num  *path;
+	t_path      *room_path;
+	t_path      *child_path;
 
-    room_path = NULL;
-    child_path = NULL;
-    path = NULL;
-    //ettol kezdve kell recursion
-    li_create_list(*room, *link, room_path, child_path);
-    // protect this with error exit
-    if (li_path_end(&child_path, room))
-        li_record_path(path, child_path);
-    // else
-    //     li_solve(ants, room, link);
-    // idaig tart a recursion, utana free?
-    ants = 0;
-    return (1);
+	room_path = NULL;
+	child_path = NULL;
+	if (!li_find_path(room, link, &room_path, &child_path) ||
+	!li_move_ants(ants, room, link))
+	{
+		li_room_free(room);
+		li_link_free(link);
+		return (throw_error());
+	}
+	return (1);
 }

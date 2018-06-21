@@ -72,8 +72,16 @@ int							li_link_invalid(char ***links_data, t_links **new);
 int							li_get_links(t_links **link, t_rooms **room, char ***links_data);
 int							li_link_com(char **line);
 int							li_solve(long long ants, t_rooms **room, t_links **link);
-int							li_create_list(t_rooms *room, t_links *link, t_path *room_path, t_path *child_path);
+int							li_create_list(t_rooms *room, t_links *link, t_path *room_path, t_path **child_path);
 int							li_make_child(t_links *link, t_path *room_path, t_path **child_path);
 int							li_repeat(int num, t_path *room_path);
+int							li_path_end(t_path *child_path, t_rooms *room);
+int							li_record_path(t_links **link, t_path *child_path, int num);
+int							li_find_path(t_rooms **room, t_links **link, t_path **room_path, t_path **child_path);
+int							li_path_free(t_path **path);
+int							li_move_ants(long long ants, t_rooms **room, t_links **link);
+int							li_ants_list(t_rooms **room, t_links **link);
+char						*li_get_room(int num, t_rooms *room);
+int							li_ants_list2(t_rooms **room, t_links **link, int ants, int last);
 
 #endif

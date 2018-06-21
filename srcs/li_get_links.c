@@ -22,7 +22,8 @@ int li_get_links(t_links **link, t_rooms **room, char ***links_data)
 		return (0);
 	}
 	ft_printf("%s", (*links_data)[0]);
-	if (!((*link)->to = li_room_number(*room, (*links_data)[1])))
+	if (!((*link)->to = li_room_number(*room, (*links_data)[1])) ||
+	(*link)->to == (*link)->from)
 	{
 		ft_freestrtab(links_data);
 		ft_printf("\n");

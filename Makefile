@@ -20,7 +20,8 @@ li_free_error1 li_free_error2 li_get_links li_link_com li_link_free \
 li_link_invalid li_new_room li_nostartend li_not_int_size li_parse \
 li_pos_duplicate li_room_com li_room_coords li_room_free li_room_invalid \
 li_room_number li_rooms_over li_rooms_size li_startend li_throw_error \
-li_solve li_create_list li_make_child li_repeat
+li_solve li_create_list li_make_child li_repeat li_path_end li_record_path \
+li_find_path li_path_free li_move_ants li_ants_list li_ants_list2 li_get_room
 C_FILES = $(patsubst %,$(SRCS)%.c, $(SOURCES)) main.c
 O_FILES = $(patsubst %,%.o, $(SOURCES)) main.o
 OBJ = $(patsubst %,objects/%.o, $(SOURCES))

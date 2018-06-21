@@ -19,18 +19,17 @@ int main(void)
     long long   ants;
     t_rooms     *room;
     t_links     *link;
+    int         error;
 
+    error = 0;
     ants = 0;
 	line = NULL;
     room = NULL;
     link = NULL;
-    if (!(li_parse(&line, &ants, &room, &link)))
-        return (-1);
-    if (!li_solve(ants, &room, &link))
-        return (-1);
+    if (!(li_parse(&line, &ants, &room, &link)) ||
+    !li_solve(ants, &room, &link))
+        error = 1;
     li_room_free(&room);
     li_link_free(&link);
-	return (0);
-    // to and from can't be the same? do I avoid it?
-    // recognize invalid maps?
+	return (error) ? (-1) : (0);
 }
