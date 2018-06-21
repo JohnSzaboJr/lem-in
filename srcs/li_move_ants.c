@@ -24,6 +24,8 @@ int li_move_ants(long long ants, t_rooms **room, t_links **link)
     ants_b = ants;
     free(*link);
     (*link) = node;
+    li_reverse_link(link);
+    node = *link;
     ft_printf("\n");
     while (ants)
     {
@@ -36,11 +38,11 @@ int li_move_ants(long long ants, t_rooms **room, t_links **link)
         (*link) = (*link)->next;
     last = *link;
     *link = node;
-    while ((last->to) < ants_b)
-    {
-        li_ants_list2(room, link, ants_b, last->from);
-        ft_printf("\n");
-        *link = node;
-    }
+    // while ((last->to) < ants_b)
+    // {
+    //     li_ants_list2(room, link, ants_b, last->from);
+    //     ft_printf("\n");
+    //     *link = node;
+    // }
     return (1);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   li_ants_list.c                                     :+:      :+:    :+:   */
+/*   li_reverse_link.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jszabo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/21 10:43:29 by jszabo            #+#    #+#             */
-/*   Updated: 2018/06/21 10:43:31 by jszabo           ###   ########.fr       */
+/*   Created: 2018/03/23 14:31:23 by jszabo            #+#    #+#             */
+/*   Updated: 2018/03/23 14:35:38 by jszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_ants_list(t_rooms **room, t_links **link)
+int	li_reverse_link(t_links **link)
 {
+	t_links *next;
+	t_links *tmp;
+	t_links *node;
+
+	next = NULL;
+	tmp = NULL;
+	node = *link;
+	while (node && node->next)
+		node = node->next;
 	while (*link)
 	{
-		if (!((*link)->next))
-		{
-			((*link)->to)++;
-			ft_printf("L%d-%s", (*link)->to, li_get_room((*link)->from, *room));
-			if ((*link)->to == 1)
-				break ;
-		}
-		else if ((*link)->next && (*link)->next->to > ((*link)->to))
-		{
-			((*link)->to)++;
-			ft_printf("L%d-%s ", (*link)->to, li_get_room((*link)->from, *room));
-		}
-		*link = (*link)->next;
+		next = (*link)->next;
+		(*link)->next = tmp;
+		tmp = *link;
+		*link = next;
 	}
+	*link = node;
 	return (1);
 }

@@ -83,5 +83,6 @@ int							li_move_ants(long long ants, t_rooms **room, t_links **link);
 int							li_ants_list(t_rooms **room, t_links **link);
 char						*li_get_room(int num, t_rooms *room);
 int							li_ants_list2(t_rooms **room, t_links **link, int ants, int last);
+int							li_reverse_link(t_links **link);
 
 #endif
