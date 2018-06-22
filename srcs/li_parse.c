@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_parse(char **line, long long *ants, t_rooms **room, t_links **link)
+int	li_parse(char **line, long long *ants, t_rooms **room, t_links **link)
 {
 	int i;
 	int section;

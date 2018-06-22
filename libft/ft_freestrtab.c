@@ -16,15 +16,15 @@
 ** Frees the memory of a null-terminated array of strings.
 */
 
-void    ft_freestrtab(char ***tab)
+void	ft_freestrtab(char ***tab)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while ((*tab)[i])
-    {
-        free((*tab)[i]);
-        i++;
-    }
-    free(*tab);
+	i = 0;
+	while ((*tab)[i])
+	{
+		free((*tab)[i]);
+		i++;
+	}
+	free(*tab);
 }

@@ -14,15 +14,15 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_rooms_size(t_rooms *room)
+int	li_rooms_size(t_rooms *room)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while (room)
-    {
-        room = room->next;
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (room)
+	{
+		room = room->next;
+		i++;
+	}
+	return (i);
 }

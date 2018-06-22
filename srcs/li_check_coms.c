@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_check_coms(char **line, t_rooms **room, int *section)
+int	li_check_coms(char **line, t_rooms **room, int *section)
 {
 	int j;
 

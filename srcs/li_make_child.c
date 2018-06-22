@@ -14,9 +14,9 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_make_child(t_links *link, t_path *room_path, t_path **child_path)
+int	li_make_child(t_links *link, t_path *room_path, t_path **child_path)
 {
-	t_path  *new;
+	t_path	*new;
 
 	while (link)
 	{

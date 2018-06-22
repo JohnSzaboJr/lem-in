@@ -14,12 +14,12 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_check_rooms(char **line, t_rooms **room, int *section)
+int	li_check_rooms(char **line, t_rooms **room, int *section)
 {
-	static int  start = 0;
-	static int  end = 0;
-	t_rooms     *new;
-	char        **room_data;
+	static int	start = 0;
+	static int	end = 0;
+	t_rooms		*new;
+	char		**room_data;
 
 	new = NULL;
 	if ((*line)[0] != '#' && (*line)[0] != 'L')

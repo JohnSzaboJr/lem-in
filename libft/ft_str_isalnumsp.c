@@ -17,7 +17,7 @@
 ** and spaces. If true, returns 1, else returns 0.
 */
 
-int ft_str_isalnumsp(char *str)
+int	ft_str_isalnumsp(char *str)
 {
 	int i;
 

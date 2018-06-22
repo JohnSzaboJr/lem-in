@@ -16,12 +16,12 @@
 ** Returns the length of a null-terminated array of strings.
 */
 
-int ft_strtablen(char **tab)
+int	ft_strtablen(char **tab)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while(tab[i])
-        i++;
-    return (i);
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
 }

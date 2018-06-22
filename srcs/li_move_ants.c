@@ -14,10 +14,10 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_move_ants(long long ants, t_rooms **room, t_links **link)
+int	li_move_ants(long long ants, t_rooms **room, t_links **link)
 {
-	t_links *node;
-	int     ants_b;
+	t_links	*node;
+	int		ants_b;
 
 	node = (*link)->next;
 	ants_b = ants;

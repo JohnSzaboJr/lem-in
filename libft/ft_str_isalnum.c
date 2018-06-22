@@ -17,7 +17,7 @@
 ** If true, returns 1, else returns 0.
 */
 
-int ft_str_isalnum(char *str)
+int	ft_str_isalnum(char *str)
 {
 	int i;
 

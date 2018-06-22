@@ -14,10 +14,10 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_solve(long long ants, t_rooms **room, t_links **link)
+int	li_solve(long long ants, t_rooms **room, t_links **link)
 {
-	t_path      *room_path;
-	t_path      *child_path;
+	t_path	*room_path;
+	t_path	*child_path;
 
 	room_path = NULL;
 	child_path = NULL;

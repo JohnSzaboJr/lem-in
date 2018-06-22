@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_find_path(t_rooms **room, t_links **link,
+int	li_find_path(t_rooms **room, t_links **link,
 t_path **room_path, t_path **child_path)
 {
 	int		num;

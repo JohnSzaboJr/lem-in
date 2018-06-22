@@ -16,7 +16,7 @@
 ** Counts the occurance of a char in a null-terminating string.
 */
 
-int ft_count_char(char *str, char c)
+int	ft_count_char(char *str, char c)
 {
 	int i;
 

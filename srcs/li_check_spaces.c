@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_check_spaces(char **line, char ***room_data)
+int	li_check_spaces(char **line, char ***room_data)
 {
 	if (ft_count_char(*line, ' ') != 2)
 	{

@@ -16,7 +16,7 @@
 
 int	li_link_invalid(char ***links_data, t_links **new)
 {
-	if ((ft_strtablen(*links_data) != 2) || 
+	if ((ft_strtablen(*links_data) != 2) ||
 	!(*new = (t_links *)malloc(sizeof(**new))))
 	{
 		ft_freestrtab(links_data);

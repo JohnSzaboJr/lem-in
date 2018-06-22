@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_room_number(t_rooms *room, char *name)
+int	li_room_number(t_rooms *room, char *name)
 {
 	while (room)
 	{

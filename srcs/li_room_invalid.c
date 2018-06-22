@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_room_invalid(char ***room_data, t_rooms **new)
+int	li_room_invalid(char ***room_data, t_rooms **new)
 {
 	if ((ft_strtablen(*room_data) != 3) ||
 	!ft_str_isalnum((*room_data)[0]) ||

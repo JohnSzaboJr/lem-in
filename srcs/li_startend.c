@@ -20,7 +20,7 @@ void	li_startend(int *start, int *end, t_rooms **room)
 		(*room)->pos = 0;
 	else if (!(*start) && *end)
 		(*room)->pos = 2;
-	 else
+	else
 		(*room)->pos = 1;
 	*start = 0;
 	*end = 0;

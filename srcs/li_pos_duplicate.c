@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_pos_duplicate(t_rooms *room, int pos)
+int	li_pos_duplicate(t_rooms *room, int pos)
 {
 	while (room)
 	{
