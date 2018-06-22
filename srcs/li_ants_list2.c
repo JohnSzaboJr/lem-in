@@ -14,19 +14,29 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_ants_list2(t_rooms **room, t_links **link, int ants, int last)
+int	li_ants_list2(t_rooms **room, t_links **link, int ants)
 {
 	while (*link)
 	{
 		if ((*link)->to != 0 && (*link)->to < ants)
 		{
 			((*link)->to)++;
-			ft_printf("L%d-%s", (*link)->to, li_get_room((*link)->from, *room));
-			if ((*link)->from != last)
+			ft_printf("L%d-%s",
+			(*link)->to, li_get_room((*link)->from, *room));
+			if (!li_largest((*link)->to, *link))
 				ft_printf(" ");
 		}
 		else if ((*link)->to != 0 && (*link)->to >= ants)
 			(*link)->to = 0;
+		else if ((*link)->to == 0 &&
+		(*link)->next && (*link)->next->to == 1)
+		{
+			((*link)->to)++;
+			ft_printf("L%d-%s",
+			(*link)->to, li_get_room((*link)->from, *room));
+			if (!li_largest((*link)->to, *link))
+				ft_printf(" ");
+		}
 		*link = (*link)->next;
 	}
 	return (1);

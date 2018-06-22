@@ -16,7 +16,7 @@
 
 int	li_duplicate_name(t_rooms *room)
 {
-	char    *name;
+	char	*name;
 
 	name = room->name;
 	room = room->next;

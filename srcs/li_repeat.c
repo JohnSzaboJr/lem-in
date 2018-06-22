@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_repeat(int num, t_path *room_path)
+int	li_repeat(int num, t_path *room_path)
 {
 	while (room_path)
 	{

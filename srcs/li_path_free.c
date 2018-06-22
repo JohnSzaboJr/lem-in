@@ -16,7 +16,7 @@
 
 int	li_path_free(t_path **path)
 {
-	t_path *tmp;
+	t_path	*tmp;
 
 	while (*path)
 	{

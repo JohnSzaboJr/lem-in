@@ -82,7 +82,9 @@ int							li_path_free(t_path **path);
 int							li_move_ants(long long ants, t_rooms **room, t_links **link);
 int							li_ants_list(t_rooms **room, t_links **link);
 char						*li_get_room(int num, t_rooms *room);
-int							li_ants_list2(t_rooms **room, t_links **link, int ants, int last);
+int							li_ants_list2(t_rooms **room, t_links **link, int ants);
 int							li_reverse_link(t_links **link);
+int							li_largest(int num, t_links *link);
+int							li_new_child(t_path **new, t_path *room_path, t_path **child_path);
 
 #endif

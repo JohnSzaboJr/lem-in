@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_new_room(t_rooms **new, char ***room_data, t_rooms **room)
+int	li_new_room(t_rooms **new, char ***room_data, t_rooms **room)
 {
 	(*new)->next = *room;
 	*room = *new;

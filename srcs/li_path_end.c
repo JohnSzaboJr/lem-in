@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_path_end(t_path *child_path, t_rooms *room)
+int	li_path_end(t_path *child_path, t_rooms *room)
 {
 	while (room->pos != 2)
 		room = room->next;

@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_link_com(char **line)
+int	li_link_com(char **line)
 {
 	if (li_count_hash(*line) == 1)
 	{

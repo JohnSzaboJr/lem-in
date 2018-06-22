@@ -10,7 +10,7 @@
 #                                                                              #
 #******************************************************************************#
 
-NAME = lem_in
+NAME = lem-in
 LIBFT = libft/libft.a
 FLAGS = -Wall -Werror -Wextra
 SRCS = srcs/
@@ -22,7 +22,7 @@ li_pos_duplicate li_room_com li_room_coords li_room_free li_room_invalid \
 li_room_number li_rooms_over li_rooms_size li_startend li_throw_error \
 li_solve li_create_list li_make_child li_repeat li_path_end li_record_path \
 li_find_path li_path_free li_move_ants li_ants_list li_ants_list2 li_get_room \
-li_reverse_link
+li_reverse_link li_largest li_new_child
 C_FILES = $(patsubst %,$(SRCS)%.c, $(SOURCES)) main.c
 O_FILES = $(patsubst %,%.o, $(SOURCES)) main.o
 OBJ = $(patsubst %,objects/%.o, $(SOURCES))

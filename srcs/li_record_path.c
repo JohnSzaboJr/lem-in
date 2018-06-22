@@ -14,9 +14,9 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_record_path(t_links **link, t_path *child_path, int num)
+int	li_record_path(t_links **link, t_path *child_path, int num)
 {
-	t_links *new;
+	t_links	*new;
 
 	li_link_free(link);
 	*link = NULL;

@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_count_hash(char *line)
+int	li_count_hash(char *line)
 {
 	int	i;
 

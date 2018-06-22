@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int	li_nostartend(t_rooms *room)
+int li_nostartend(t_rooms *room)
 {
-    return ((!li_pos_duplicate(room, 0) || !li_pos_duplicate(room, 2)));
+	return ((!li_pos_duplicate(room, 0) || !li_pos_duplicate(room, 2)));
 }

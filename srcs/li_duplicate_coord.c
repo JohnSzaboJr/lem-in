@@ -16,8 +16,8 @@
 
 int	li_duplicate_coord(t_rooms *room)
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 
 	x = room->x;
 	y = room->y;

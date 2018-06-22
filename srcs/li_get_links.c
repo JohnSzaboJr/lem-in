@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_get_links(t_links **link, t_rooms **room, char ***links_data)
+int	li_get_links(t_links **link, t_rooms **room, char ***links_data)
 {
 	if (!((*link)->from = li_room_number(*room, (*links_data)[0])))
 	{

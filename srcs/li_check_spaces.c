@@ -17,9 +17,9 @@
 int li_check_spaces(char **line, char ***room_data)
 {
 	if (ft_count_char(*line, ' ') != 2)
-    {
-        ft_freestrtab(room_data);
-        return (0);
-    }
+	{
+		ft_freestrtab(room_data);
+		return (0);
+	}
 	return (1);
 }

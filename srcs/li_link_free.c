@@ -16,7 +16,7 @@
 
 int	li_link_free(t_links **link)
 {
-	t_links *tmp;
+	t_links	*tmp;
 
 	while (*link)
 	{

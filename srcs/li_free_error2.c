@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_free_error2(char **line, t_rooms **room, t_links **link)
+int	li_free_error2(char **line, t_rooms **room, t_links **link)
 {
 	li_link_free(link);
 	li_room_free(room);

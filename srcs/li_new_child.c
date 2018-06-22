@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   li_link_invalid.c                                  :+:      :+:    :+:   */
+/*   li_new_child.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jszabo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/19 14:31:23 by jszabo            #+#    #+#             */
-/*   Updated: 2018/07/19 14:35:38 by jszabo           ###   ########.fr       */
+/*   Created: 2018/06/20 11:56:54 by jszabo            #+#    #+#             */
+/*   Updated: 2018/06/20 11:56:55 by jszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int	li_link_invalid(char ***links_data, t_links **new)
+int	li_new_child(t_path **new, t_path *room_path, t_path **child_path)
 {
-	if ((ft_strtablen(*links_data) != 2) || 
-	!(*new = (t_links *)malloc(sizeof(**new))))
-	{
-		ft_freestrtab(links_data);
-		return (1);
-	}
-	return (0);
+	if (!(*new = (t_path *)malloc(sizeof(**new))))
+		return (0);
+	(*new)->next = *child_path;
+	*child_path = *new;
+	(*child_path)->parent = room_path;
+	return (1);
 }

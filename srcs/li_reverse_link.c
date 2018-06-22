@@ -16,9 +16,9 @@
 
 int	li_reverse_link(t_links **link)
 {
-	t_links *next;
-	t_links *tmp;
-	t_links *node;
+	t_links	*next;
+	t_links	*tmp;
+	t_links	*node;
 
 	next = NULL;
 	tmp = NULL;

@@ -16,11 +16,11 @@
 
 int li_pos_duplicate(t_rooms *room, int pos)
 {
-    while (room)
-    {
-        if (room->pos == pos)
-            return (1);
-        room = room->next;
-    }
-    return (0);
+	while (room)
+	{
+		if (room->pos == pos)
+			return (1);
+		room = room->next;
+	}
+	return (0);
 }

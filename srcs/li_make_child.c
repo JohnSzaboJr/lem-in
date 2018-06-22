@@ -16,29 +16,25 @@
 
 int li_make_child(t_links *link, t_path *room_path, t_path **child_path)
 {
-    t_path *new;
+	t_path  *new;
 
-    while (link)
-    {
-        if (room_path->room_num == link->from && !li_repeat(link->to, room_path))
-        {
-            if (!(new = (t_path *)malloc(sizeof(*new))))
-                return (0);
-            new->next = *child_path;
-            *child_path = new;
-            (*child_path)->parent = room_path;
-            (*child_path)->room_num = link->to;
-        }
-        else if (room_path->room_num == link->to && !li_repeat(link->from, room_path))
-        {
-            if (!(new = (t_path *)malloc(sizeof(*new))))
-                return (0);
-            new->next = *child_path;
-            *child_path = new;
-            (*child_path)->parent = room_path;
-            (*child_path)->room_num = link->from;
-        }
-        link = link->next;
-    }
-    return (1);
+	while (link)
+	{
+		if (room_path->room_num == link->from &&
+		!li_repeat(link->to, room_path))
+		{
+			if (!li_new_child(&new, room_path, child_path))
+				return (0);
+			(*child_path)->room_num = link->to;
+		}
+		else if (room_path->room_num == link->to &&
+		!li_repeat(link->from, room_path))
+		{
+			if (!li_new_child(&new, room_path, child_path))
+				return (0);
+			(*child_path)->room_num = link->from;
+		}
+		link = link->next;
+	}
+	return (1);
 }

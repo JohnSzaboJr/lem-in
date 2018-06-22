@@ -16,7 +16,7 @@
 
 int li_free_error1(char **line, t_rooms **room)
 {
-    li_room_free(room);
-    free(*line);
-    return (throw_error());
+	li_room_free(room);
+	free(*line);
+	return (throw_error());
 }

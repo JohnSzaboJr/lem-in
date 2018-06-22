@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-char *li_get_room(int num, t_rooms *room)
+char	*li_get_room(int num, t_rooms *room)
 {
 	while (room && room->num != num)
 		room = room->next;

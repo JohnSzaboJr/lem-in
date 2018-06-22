@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int li_check_ants(char **line, long long *ants, t_rooms **room, int *section)
+int	li_check_ants(char **line, long long *ants, t_rooms **room, int *section)
 {
 	static int	done = 0;
 

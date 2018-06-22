@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   li_link_invalid.c                                  :+:      :+:    :+:   */
+/*   li_largest.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jszabo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/19 14:31:23 by jszabo            #+#    #+#             */
-/*   Updated: 2018/07/19 14:35:38 by jszabo           ###   ########.fr       */
+/*   Created: 2018/06/21 10:43:29 by jszabo            #+#    #+#             */
+/*   Updated: 2018/06/21 10:43:31 by jszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int	li_link_invalid(char ***links_data, t_links **new)
+int	li_largest(int num, t_links *link)
 {
-	if ((ft_strtablen(*links_data) != 2) || 
-	!(*new = (t_links *)malloc(sizeof(**new))))
+	while (link)
 	{
-		ft_freestrtab(links_data);
-		return (1);
+		if (num < link->to)
+			return (0);
+		link = link->next;
 	}
-	return (0);
+	return (1);
 }
