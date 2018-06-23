@@ -25,10 +25,14 @@ int	li_room_com(char **line, t_rooms **room, int *start, int *end)
 	}
 	else if (li_count_hash(*line) == 2)
 	{
-		if (!ft_str_isalnum(*line + 2))
+		if (!ft_str_isalnum(*line + 2) || !((*line)[2]))
 			return (0);
-		*start = ft_strcmp(*line, "##start") ? 0 : 1;
-		*end = ft_strcmp(*line, "##end") ? 0 : 1;
+		if (!ft_strcmp(*line, "##start"))
+			*start = 1;
+		if (!ft_strcmp(*line, "##end"))
+			*end = 1;
+		if ((*start) && (*end))
+			return (0);
 		if ((*start && li_pos_duplicate(*room, 0)) ||
 			(*end && li_pos_duplicate(*room, 2)))
 			return (0);

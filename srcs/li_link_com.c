@@ -25,7 +25,7 @@ int	li_link_com(char **line)
 	}
 	else if (li_count_hash(*line) == 2)
 	{
-		if (!ft_str_isalnum(*line + 2) ||
+		if (!((*line)[2]) || !ft_str_isalnum(*line + 2) ||
 		!ft_strcmp(*line, "##start") ||
 		!ft_strcmp(*line, "##end"))
 			return (0);

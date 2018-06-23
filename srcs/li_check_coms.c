@@ -25,7 +25,7 @@ int	li_check_coms(char **line, t_rooms **room, int *section)
 	{
 		if ((j == 1 && !ft_str_isalnumsp(*line + 1)) ||
 			(j == 1 && (*line)[ft_strlen(*line) - 1] == ' ') ||
-			(j == 2 && !ft_str_isalnum(*line + 2)))
+			(j == 2 && (!((*line)[2]) || !ft_str_isalnum(*line + 2))))
 			return (li_free_error1(line, room));
 		if (!ft_strcmp(*line, "##start") ||
 			!ft_strcmp(*line, "##end"))

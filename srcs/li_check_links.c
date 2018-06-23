@@ -14,7 +14,7 @@
 #include "../lem_in.h"
 #include "../libft/libft.h"
 
-int	li_check_links(char **line, t_rooms **room, t_links **link)
+int	li_check_links(char **line, t_rooms **room, t_links **link, int *command)
 {
 	char	**links_data;
 	t_links *new;
@@ -32,6 +32,7 @@ int	li_check_links(char **line, t_rooms **room, t_links **link)
 		ft_freestrtab(&links_data);
 		return (1);
 	}
+	*command = (li_count_hash(*line) == 2) ? 1 : 0;
 	if (!li_link_com(line) || !(*link))
 		return (li_free_error2(line, room, link));
 	return (1);

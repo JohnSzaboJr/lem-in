@@ -77,7 +77,7 @@ int							li_count_hash(char *line);
 int							li_room_com(char **line, t_rooms **room,
 int *start, int *end);
 int							li_check_links(char **line, t_rooms **room,
-t_links **link);
+t_links **link, int *command);
 int							li_link_free(t_links **link);
 int							li_room_number(t_rooms *room,
 char *name);
