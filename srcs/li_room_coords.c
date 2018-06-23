@@ -17,7 +17,7 @@
 int	li_room_coords(char ***room_data, t_rooms **room)
 {
 	if ((*room_data)[1][0] == '-' || ft_hasnondigits((*room_data)[1]) ||
-	ft_strlen((*room_data)[1]) > 20 || ft_atoll((*room_data)[1]) > 2147483647)
+	ft_strlen((*room_data)[1]) > 18 || ft_atoll((*room_data)[1]) > 2147483647)
 	{
 		ft_printf("\n");
 		ft_freestrtab(room_data);
@@ -26,7 +26,7 @@ int	li_room_coords(char ***room_data, t_rooms **room)
 	(*room)->x = ft_atoll((*room_data)[1]);
 	ft_printf(" %d", (*room)->x);
 	if ((*room_data)[2][0] == '-' || ft_hasnondigits((*room_data)[2]) ||
-	ft_strlen((*room_data)[2]) > 20 || ft_atoll((*room_data)[2]) > 2147483647)
+	ft_strlen((*room_data)[2]) > 18 || ft_atoll((*room_data)[2]) > 2147483647)
 	{
 		ft_printf("\n");
 		ft_freestrtab(room_data);
