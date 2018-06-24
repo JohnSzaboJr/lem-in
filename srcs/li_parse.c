@@ -16,11 +16,9 @@
 
 int	li_parse(char **line, long long *ants, t_rooms **room, t_links **link)
 {
-	int i;
 	int section;
 	int	command;
 
-	i = 0;
 	section = 0;
 	command = 0;
 	*link = NULL;
@@ -34,7 +32,6 @@ int	li_parse(char **line, long long *ants, t_rooms **room, t_links **link)
 		(section == 3 && !li_check_links(line, room, link, &command)))
 			return (0);
 		free(*line);
-		i++;
 	}
 	free(*line);
 	if (!(*room) || command)
