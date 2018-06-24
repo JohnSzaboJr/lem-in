@@ -128,6 +128,8 @@ libft/libft.h
 
 all: $(NAME)
 
+.PHONY: clean all fclean re
+
 $(LIBFT):
 	@make -C libft/ all
 
