@@ -131,3 +131,5 @@ fclean: clean
 	@echo '\033[0;32m'*** libft library deleted ***'\033[0m'
 
 re: fclean all
+
+.PHONY:			all clean fclean re

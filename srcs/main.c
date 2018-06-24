@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jszabo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 09:35:03 by jszabo            #+#    #+#             */
-/*   Updated: 2018/02/07 12:20:59 by jszabo           ###   ########.fr       */
+/*   Created: 2018/07/17 14:31:23 by jszabo            #+#    #+#             */
+/*   Updated: 2018/07/17 14:35:38 by jszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-#include <string.h>
+#include "../lem_in.h"
+#include "../libft/libft.h"
 
-char	*ft_strnew(size_t size)
+int	main(void)
 {
-	char	*new;
-	size_t	i;
+	char		*line;
+	long long	ants;
+	t_rooms		*room;
+	t_links		*link;
+	int			error;
 
-	i = 0;
-	if (!(new = (char *)malloc(sizeof(*new) * (size + 1))))
-		return (NULL);
-	while (i < size + 1)
-	{
-		new[i] = '\0';
-		i++;
-	}
-	return (new);
+	error = 0;
+	ants = 0;
+	line = NULL;
+	room = NULL;
+	link = NULL;
+	if (!(li_parse(&line, &ants, &room, &link)) ||
+	!li_solve(ants, &room, &link))
+		error = 1;
+	li_room_free(&room);
+	li_link_free(&link);
+	return (error) ? (1) : (0);
 }
